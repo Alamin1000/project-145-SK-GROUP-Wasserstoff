@@ -11,6 +11,7 @@
 	<link href="https://kit-pro.fontawesome.com/releases/v5.15.2/css/pro.min.css" rel="stylesheet">
 	<!-- plugins -->
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/aos.css">
 	<!-- StyleSheet -->
 	<link rel="stylesheet" href="css/default-edit.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -27,23 +28,19 @@
 
 		<!-- offcanvas-start -->
 		<div class="offcanvas-menu">
-			<ul class="offmenu" id="menuParent">
-				<a href="#" class="offcanvas-close"><i class="fa fa-times"></i></a>
-				<li class="active"><a href="#">HOME</a></li>
-				<li><a href="#">ABOUT US</a></li>
-				<li class="dropdown">
-					<a href="#" data-bs-toggle="collapse" data-bs-target='#drop-menu1'>OUR HORSES</a>
-					<div class="dropdown-menu-custom collapse" id="drop-menu1" data-bs-parent="#menuParent">
-						<ul>
-							<li><a href="#">YEARLINGS</a></li>
-							<li><a href="#">2 YEAR OLDS</a></li>
-							<li><a href="#">3 YEAR OLD PLUS</a></li>
-						</ul>
-					</div>
-				</li>
-				<li><a href="#">LATEST NEWS</a></li>
-				<li><a href="#">CONTACT & FIND US</a></li>
-			</ul>
+			<div class="offmenu" id="menuParent">
+				<a href="#" class="offcanvas-close"><i class="fal fa-times"></i></a>
+				<ul class="mobile-menu">
+					<li><a href="#">USP</a></li>
+					<li><a href="#">Was Wir bieten</a></li>
+					<li><a href="#">Projekte</a></li>
+					<li><a href="#">Über uns</a></li>
+					<li><a href="#">Weltweit</a></li>
+					<li><a href="#">DE</a></li>
+				</ul>
+
+				<a href="#" class="off-bottom-button mt-4 mx-auto default-button">Kontakt</a>
+			</div>
 		</div>
 		<div class="offcanvas-overlay"></div>
 		<!-- offcanvas-start-end -->
@@ -57,7 +54,7 @@
 							<img src="images/logo.svg" alt="">
 						</a>
 	
-						<div class="header-right">
+						<div class="header-right d-xl-flex d-none">
 							<div class="main-menu">
 								<ul>
 									<li><a href="#">USP</a></li>
@@ -70,6 +67,10 @@
 							<a href="#" class="ans-sgl">DE</a>
 							<a href="#" class="hr-button default-button">Kontakt</a>
 						</div>
+
+						<a href="javascript:void(0)" class="offcanvas-open d-xl-none">
+							<i class="fal fa-bars"></i>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -80,16 +81,28 @@
 			<!-- hero-section -->
 			<section class="hero-section">
 				<div class="container">
+					<div class="hero-shape hero-shape1 window-rotation">
+						<img class="" src="images/shape1.png" alt="">
+					</div>
+					<div class="hero-shape hero-shape2 slide-left">
+						<img src="images/shape1.png" alt="">
+					</div>
+					<div class="hero-shape hero-shape3 animation-rotate">
+						<img src="images/shape1.png" alt="">
+					</div>
+					<div class="hero-shape hero-shape4 animation-rotate">
+						<img src="images/shape1.png" alt="">
+					</div>
 					<div class="hero-section-inner">
 						<div class="hero-row">
-							<div class="text-side">
+							<div class="text-side"  data-aos="fade-right" data-aos-duration="1000" data-aos-delay="00">
 								<h1 class="h1">Working together to make Hydrogen happen.</h1>
 							</div>
-							<div class="hgn-side">
+							<div class="hgn-side"  data-aos="fade-in" data-aos-duration="1000" data-aos-delay="00">
 								<img src="images/hydrogen.png" alt="" class="hydrogen">
 							</div>
 						</div>
-						<div class="hero-row2">
+						<div class="hero-row2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="00">
 							<a href="#solution-section" class="hr-pass-btn">
 								<span class="txt">Mehr</span>
 								<img src="images/arrow-bottom-white-hb.svg" alt="" class="arr">
@@ -106,7 +119,7 @@
 				<div class="container">
 					<div class="solution-section-inner">
 
-						<div class="solution-sec-title sec-title sec-cont-blk">
+						<div class="solution-sec-title sec-title sec-cont-blk" data-aos="fade-in">
 							<h4 class="h4">Lösungen für die Wasserstoffbranche</h4>
 							<div class="h4-bt-line"></div>
 							<h2 class="h2">Der alte Hase in der <br> neuen Branche</h2>
@@ -114,7 +127,7 @@
 
 						<div class="solutions-wrapper">
 							<!-- solution-single -->
-							<div class="solution-single">
+							<div class="solution-single" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
 								<div class="icon">
 									<img src="images/finger.svg" alt="">
 								</div>
@@ -125,7 +138,7 @@
 							</div>
 							<!-- solution-single-end -->
 							<!-- solution-single -->
-							<div class="solution-single">
+							<div class="solution-single" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
 								<div class="icon">
 									<img src="images/light-brain.svg" alt="">
 								</div>
@@ -136,7 +149,7 @@
 							</div>
 							<!-- solution-single-end -->
 							<!-- solution-single -->
-							<div class="solution-single">
+							<div class="solution-single" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="00">
 								<div class="icon">
 									<img src="images/checked-by.svg" alt="">
 								</div>
@@ -156,14 +169,32 @@
 			<!-- fi-section -->
 			<section class="fi-section">
 				<div class="container">
+					<div class="fi-shape fi-shape1 window-rotation">
+						<img src="images/shape1.png" alt="">
+					</div>
+					<div class="fi-shape fi-shape2 animation-rotate">
+						<img src="images/shape1.png" alt="">
+					</div>
+					<div class="fi-shape fi-shape3 animation-rotate">
+						<img src="images/shape1.png" alt="">
+					</div>
+					<div class="fi-shape fi-shape4">
+						<img src="images/shape1.png" alt="">
+					</div>
+					<div class="fi-shape fi-shape5 animation-rotate">
+						<img src="images/shape1.png" alt="">
+					</div>
+					<div class="fi-shape fi-shape6 window-rotation">
+						<img src="images/shape1.png" alt="">
+					</div>
 					<div class="fi-section-inner">
-						<div class="fi-sec-title sec-title sec-cont-blk">
+						<div class="fi-sec-title sec-title sec-cont-blk"  data-aos="fade-in">
 							<h4 class="h4">Lösungen für die Wasserstoffbranche</h4>
 							<div class="h4-bt-line"></div>
 							<h2 class="h2">H2 Kompetenz <br> seit 20+ Jahren</h2>
 						</div>
 
-						<div class="fi-main-image">
+						<div class="fi-main-image" data-aos="zoom-in" data-aos-duration="1400">
 							<img src="images/Wimmelbild_neu.png" alt="">
 						</div>
 
@@ -543,7 +574,11 @@
 	<!-- plugin -->
 	<script src="js/jquery.scrollUp.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/aos.js"></script>
 	<!-- custom-js -->
+	<script>
+		AOS.init();
+	</script>
 	<script src="js/main.js"></script>
 	<!-- End All Js -->
 	

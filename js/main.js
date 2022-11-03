@@ -71,40 +71,21 @@
 
 
     // window-animation
-    function windowAnimation(selector,actionClass,iteration){
+    function winCount(){
       document.addEventListener('scroll', function(){
         let ticking = false;
         if (!ticking) {
           window.requestAnimationFrame(() => {
-            const once = iteration;
             const windPos = window.scrollY;
             const windHeight = window.innerHeight;
-            const selectorS = document.querySelectorAll(selector);
-            function actionScroll(){
-              selectorS.forEach(elmN => {
-                let thisIs = elmN;
-                let thisHeight = thisIs.offsetHeight;
-                let check = windPos > (thisIs.offsetTop - (windHeight * 0.7));
-                let check2 = windPos > (thisIs.offsetTop - windHeight  + (thisHeight * 0.7));
-                let checkEnd = (windPos + windHeight) < (thisIs.offsetTop);
-                if(checkEnd && !once) {
-                  thisIs.classList.remove(actionClass); //remove-first
-                }
-                if (check && check2){
-                  thisIs.classList.add(actionClass); //then-add
-                }
-              })
-            }
-            if(selectorS.length){
-              actionScroll();
-            };
+            document.querySelector('body').style.setProperty('--windPos', windPos);
             ticking = false;
           });
           ticking = true;
         }
       })
     }
-    windowAnimation('.wa-object','wa-visible',false);
+    winCount();
      
 
 })(jQuery);

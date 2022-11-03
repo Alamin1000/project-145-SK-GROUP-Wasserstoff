@@ -102,6 +102,7 @@
 }
 *,::before,::after {
   box-sizing: border-box;
+  scroll-margin: calc(var(--header-height) - 2px);
 }
 body {
   font-size: 16px;
@@ -233,8 +234,10 @@ p:last-child{
   margin: 0;
 }
 .h4 {
-  font-size: 16;
+  font-size: 16px;
   margin: 0 0 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   line-height: 1.05;
   color: var(--theme__color1);
 }
@@ -341,19 +344,22 @@ p:last-child{
 .offcanvas-open {
   font-size: 22px;
   transition: 0.3s;
+  color: var(--theme__color2);
 }
 .offcanvas-open:hover {
-  color: #97A3AE;
+  color: var(--theme__color1);
 }
 .offcanvas-close {
-  color: var(--theme__color1);
+  color: var(--theme__color2);
   position: absolute;
   transition: 0.3s;
-  right: 25px;
-  top: 25px;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
+  line-height: 1;
 }
 .offcanvas-close:hover {
-  color: #97A3AE;
+  color: var(--theme__color1);
 }
 .offcanvas-menu {
   position: fixed;
@@ -373,7 +379,7 @@ p:last-child{
   min-width: 200px;
   z-index: 5;
   position: relative;
-  background: #d5dce2;
+  background: #fff;
   height: 100%;
   padding: 50px 20px 40px;
   overflow: auto;
@@ -383,19 +389,15 @@ p:last-child{
 .offcanvas-menu .offmenu :-webkit-scrollbar {
   display: none;
 }
-.offcanvas-menu ul li a {
+.mobile-menu li a {
   display: block;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
+  color: var(--theme__color2);
+  padding: 7px;
+}
+.mobile-menu li a:hover {
   color: var(--theme__color1);
-  padding: 10px;
-}
-.dropdown-menu-custom ul {
-  background: #fff;
-  padding: 20px 0;
-}
-.dropdown-menu-custom ul li a {
-  color: #97A3AE;
 }
 .offcanvas-overlay {
   position: fixed;
@@ -437,8 +439,52 @@ p:last-child{
 }
 .hero-section-inner {
   padding: 61px 59px 30px;
+  /* min-height: 630px; */
   background: url('images/hero-background.png') no-repeat center center/cover;
   color: #ffffff;
+}
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+.hero-shape {
+  position: absolute;
+}
+.hero-shape1 {
+	width: 376px;
+	bottom: -98px;
+	right: -160px;
+	z-index: -1;
+}
+.hero-shape1 img {
+	transform: rotate(-30deg);
+}
+.hero-shape2 {
+	width: 120px;
+	bottom: -140px;
+	right: -70px;
+	z-index: -1;
+}
+.hero-shape2 img {
+  	transform: rotate(-54deg);
+}
+.hero-shape3 {
+	width: 30px;
+	bottom: -160px;
+	right: -60px;
+	z-index: -1;
+}
+.hero-shape3 img {
+  	transform: rotate(-77deg);
+}
+.hero-shape4 {
+	width: 43px;
+	bottom: -70px;
+	right: 230px;
+	z-index: -1;
+}
+.hero-shape4 img {
+  	transform: rotate(-77deg);
 }
 
 .hero-row {
@@ -543,7 +589,69 @@ p:last-child{
 	top: 0;
 	left: 0;
 	background: #F8F8F8;
+	z-index: -5;
+}
+.fi-section .container {
+  position: relative;
+  z-index: 1;
+}
+.fi-shape {
+  position: absolute;
+}
+.fi-shape1 {
+	width: 376px;
+	right: -60px;
+	top: 100px;
 	z-index: -1;
+}
+.fi-shape1 img {
+	transform: rotate(141deg);
+}
+.fi-shape2 {
+	width: 125px;
+	right: -72px;
+	top: 370px;
+	transform: rotate(383deg);
+	z-index: -1;
+}
+.fi-shape2 img {
+	transform: rotate(25deg);
+}
+.fi-shape3 {
+	width: 145px;
+	left: -110px;
+	top: 806px;
+	z-index: -1;
+}
+.fi-shape3 img {
+  transform: rotate(25deg);
+}
+.fi-shape4 {
+	width: 64px;
+	left: -64px;
+	top: 898px;
+	z-index: -1;
+}
+.fi-shape4 img {
+	transform: rotate(72deg);
+}
+.fi-shape5 {
+	width: 145px;
+	left: -114px;
+	top: 1502px;
+	z-index: -1;
+}
+.fi-shape5 img {
+	transform: rotate(15deg);
+}
+.fi-shape6 {
+	width: 376px;
+	right: -218px;
+	bottom: 20px;
+	z-index: -1;
+}
+.fi-shape6 img {
+	transform: rotate(135deg);
 }
 .fi-section-inner {
 
@@ -592,9 +700,18 @@ p:last-child{
   width: 60px;
   margin: 0 55px 0 0;
   text-align: center;
+  flex-shrink: 0;
 }
-.fi-single .t-title .detail {
-
+.fi-single .t-title .detail { 
+  margin: 0 30px 0 0;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  transition: .3s ease;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .fi-single .t-title .ind {
   font-size: 20px;
@@ -632,9 +749,9 @@ p:last-child{
   object-position: center;
 }
 .fi-single .collapsed-content .content-side {
-  padding: 15px 19px 0 32px;
-  display: flex;
-  align-self: flex-start;
+	padding: 15px 19px 25px 32px;
+	display: flex;
+	align-self: flex-start;
 }
 .fi-single .collapsed-content .text-part {
 
