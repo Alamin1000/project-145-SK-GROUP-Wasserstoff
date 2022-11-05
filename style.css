@@ -1473,3 +1473,62 @@ p:last-child{
   color: var(--theme__color1);
 }
 /* ---footer-section---end */
+
+
+/* ---policy-section--- */
+.policy-section {
+  padding: 60px 0 75px;
+}
+.policy-section::after {
+	content: '';
+	width: calc(50% + 0px);
+	height: 455px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #F8F8F8;
+	z-index: -1;
+}
+.policy-section-inner {
+
+}
+
+.policy-sec-r1 {
+  display: flex;
+  justify-content: space-between;
+}
+.policy-sec-p-side {
+  width: 48.5%;
+}
+.policy-sec-p-side .title-part {
+  margin: 0 0 35px;
+}
+.policy-sec-p-side .text-wrapper {
+
+}
+.text-pg {
+  margin: 0 0 45px;
+}
+.text-pg h4 {
+  margin: 0 0 23px;
+  font-size: 24px;
+}
+.text-pg p {
+  margin: 0 0 22px;
+}
+
+
+.policy-sec-img-side {
+  width: 49.5%;
+}
+.policy-sec-img-side .impressum-image {
+  margin: 110px 0 0 40px;
+  width: 466px;
+  max-width: 100%;
+}
+.policy-sec-img-side .privacy-policy-image {
+  margin: 40px 0 0 130px;
+  width: 262px;
+  max-width: 100%;
+}
+/* ---policy-section---end */

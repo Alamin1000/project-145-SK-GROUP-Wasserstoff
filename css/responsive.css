@@ -262,6 +262,22 @@
     .fm-menu li a {
         font-size: 14px;
     }
+
+
+    .policy-sec-img-side .impressum-image {
+        margin: 10px 0 0 30px;
+        width: 350px;
+    }
+    .policy-section::after {
+        content: '';
+        width: calc(50% + 0px);
+        height: 387px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #F8F8F8;
+        z-index: -1;
+    }
 }
 
 
@@ -439,6 +455,36 @@
     }
     .fm-menu {
         margin: 15px 0 0;
+    }
+
+
+    .policy-sec-r1 {
+        flex-wrap: wrap;
+    }
+    .policy-sec-img-side {
+        width: 100%;
+        margin: 0 0 40px;
+        order: -1;
+        display: flex;
+        justify-content: center;
+    }
+    .policy-section::after {
+        display: none;
+    }
+    .policy-section {
+        padding: 30px 0 40px;
+    }
+    .policy-sec-p-side {
+        width: 100%;
+    }
+    .policy-sec-img-side .impressum-image {
+        margin: 0;
+    }
+    .policy-sec-img-side .privacy-policy-image {
+        margin: 0px 0 0 0px;
+        width: initial;
+        max-width: 100%;
+        padding: 0 20%;
     }
 }
 
