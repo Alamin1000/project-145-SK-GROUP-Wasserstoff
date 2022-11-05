@@ -177,6 +177,14 @@ p:last-child{
 .main-wrap {
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 @media (min-width: 1400px) {
   .container {
