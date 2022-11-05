@@ -45,27 +45,14 @@
 
 
   // owl-carousel
-  $('.brand-active').owlCarousel({
+  $('.testimonial-slider-active').owlCarousel({
     loop:true,
-    margin:50,
+    margin:0,
     responsiveClass:true,
-    nav:false,
-    navText: ['<span class="fas fa-chevron-left fa-2x"></span>','<span class="fas fa-chevron-right fa-2x"></span>'],
-    responsive:{
-        0:{
-            items:1,
-            nav:false
-        },
-        600:{
-            items:3,
-            nav:false
-        },
-        1000:{
-            items:4,
-            nav:false,
-            loop:false
-        }
-    }
+    nav: true,
+    items:1,
+    dots:false,
+    navText: ['<span class="far fa-arrow-left"></span>','<span class="far fa-arrow-right"></span>']
   });
 
 

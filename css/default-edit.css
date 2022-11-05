@@ -148,17 +148,11 @@
 
 
 /* fonts */
-.font1 {
-    font-family: var(--font1);
+.SourceSerifPro {
+    font-family: var(--sourceSerifPro);
 }
-.font2 {
-    font-family: var(--font2);
-}
-.font3 {
-    font-family: var(--font3);
-}
-.font4 {
-    font-family: var(--font4);
+.Blender {
+    font-family: var(--Blender);
 }
 
 
