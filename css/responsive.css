@@ -111,6 +111,157 @@
         background: var(--theme__color1);
         color: #fff;
     }
+
+
+    .fgh-section {
+        padding: 60px 0;
+    }
+    .fgh-single .icon {
+        width: 130px;
+        margin: 0 25px 0 0;
+    }
+    .fgh-wrapper .progress-img {
+        width: 70px;
+    }
+
+
+    .ndf-section {
+        padding: 60px 0;
+    }
+    .ndf-single .icon img {
+        transform: scale(0.7);
+    }
+    .ndf-single .icon {
+        height: 54px;
+        margin: 0 0 4px;
+    }
+    .ndf-single .texts .b-number {
+        font-size: 60px;
+    }
+
+
+    .rp-section {
+        padding: 60px 0;
+    }
+    .rp-sec-title {
+        margin: 0 0 10px;
+    }
+    .rp-l1-nav ul li a p {
+        font-size: 14px;
+        margin: 0 0 10px;
+    }
+    .rp-l1-nav ul li a .bt-dline {
+        height: 5px;
+        width: 45px;
+    }
+    .rp-l2-nav ul li a h4 {
+        font-size: 20px;
+    }
+    .rp-l2-nav ul li a svg {
+        margin: -2px 0 0 3px;
+        width: 16px;
+    }
+    .rp-l2-nav ul {
+        --inner-space: 20px;
+        --bt-space: 35px;
+        --item: 3;
+    }
+    .rp-content-row2 .rp-l2-nav {
+        padding: 35px 0 0;
+    }
+    .rp-card-box .close-button {
+        margin: -17px -17px 0 0;
+        width: 47px;
+    }
+    .rp-card-box .content {
+        padding: 23px 15px 50px;
+    }
+    .rp-card-box .content .bt-title h3 {
+        font-size: 21px;
+        margin: 0 0 13px;
+    }
+    .rp-card-box .content .bt-title {
+        margin: 0 0 15px;
+    }
+
+
+    .partners-section {
+        padding: 60px 0;
+    }
+    .partner-single .logo-image .img {
+        transform: scale(0.7);
+    }
+    .partners-wrapper {
+        --inner-space: 15px;
+    }
+
+
+    .testimonial-section {
+        padding: 45px 0;
+    }
+    .h2.mb {
+        margin: 0 0 22px;
+    }
+    .testimonial-in-r1-c-side .bt-txts h4 {
+        font-size: 20px;
+        margin: 0 0 10px;
+    }
+    .testimonial-in-r1-c-side .bt-txts h5 {
+        font-size: 14px;
+    }
+    .slider-arrow1 .owl-nav button {
+        font-size: 17px !important;
+    }
+    .slider-arrow1 .owl-nav {
+        width: 55px;
+    }
+    .testimonial-slider .owl-nav {
+        margin: 15px 0 0 0px;
+    }
+
+
+    .ww-section {
+        padding: 50px 0;
+    }
+    .ww-title-li {
+        font-size: 14px;
+        padding-left: 28px;
+    }
+    .ww-title-li::before {
+        height: 17px;
+        width: 17px;
+        top: 3px;
+    }
+    .ww-section-title {
+        margin: 0 0 40px;
+    }
+
+
+    .contact-us-section {
+        padding: 50px 0 0;
+    }
+    .check-label-x {
+        font-size: 14px;
+    }
+    .cm-menu li a .icon {
+        width: 25px;
+        margin: 1px 9px 0 0;
+    }
+    .cm-menu li {
+        margin: 0 0 19px;
+    }
+
+
+    .footer-logo {
+        display: block;
+        width: 140px;
+    }
+    .fm-menu li {
+        margin: 0 25px 0 0;
+    }
+    .fm-menu li a {
+        font-size: 14px;
+    }
 }
 
 
@@ -177,6 +328,117 @@
     }
     .fi-single .collapsed-content .content-side {
         padding: 15px 0px 20px 0px;
+    }
+
+
+    .fgh-wrapper .progress-img {
+        display: none;
+    }
+    .fgh-wrapper {
+        flex-wrap: wrap;
+    }
+    .fgh-column {
+        width: 100%;
+        margin: 0 0 40px; 
+    }
+    .fgh-column:last-child {
+        margin: 0;
+    }
+    .fgh-single {
+        margin: 0 0 40px;
+        display: flex;
+        align-items: center;
+    }
+    .ndf-full-image {
+        height: 400px;
+        margin: 0 0 30px;
+    }
+    .ndf-single .texts .b-number {
+        font-size: 50px;
+    }
+    .ndf-sec-title {
+        flex-wrap: wrap;
+    }
+    .ndf-sec-title-left {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    .ndf-sec-title-right {
+        width: 100%;
+    }
+    .rp-l1-nav ul li {
+        margin: 15px 40px 0 0;
+    }
+    .rp-content-row2 {
+        flex-wrap: wrap;
+    }
+    .rp-content-row2 .rp-l2-nav {
+        padding: 60px 0 0;
+        width: 100%;
+    }
+    .rp-lv2-tab-pane::after {
+        right: -500px;
+        display: none;
+    }
+    .rp-content-row2 .rp-cr2-box-side {
+        margin: 30px 0 0px;
+        width: 100%;
+    }
+
+
+    .partners-wrapper {
+        padding: 0;
+    }
+
+
+    .testimonial-in-r1 {
+        flex-wrap: wrap;
+    }
+    .testimonial-in-r1-slider-side {
+        width: 100%;
+        margin-left: 0;
+    }
+    .testimonial-in-r1-c-side .bt-txts {
+        margin: auto 0 30px;
+    }
+    .testimonial-section::after {
+        width: calc(50% + 640px);
+    }
+
+    
+    .ww-section-title {
+        flex-wrap: wrap;
+    }
+    .ww-section-title .left {
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    .ww-section-title .right {
+        width: 100%;
+    }
+
+
+    .contact-us-person-column {
+        display: none;
+    }
+    .contact-us-info-column {
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .contact-us-r1 {
+        flex-wrap: wrap;
+    }
+    .contact-us-sec-title {
+        margin: 0 0 20px;
+    }
+
+
+    .footer-section-inner {
+        flex-direction: column;
+    }
+    .fm-menu {
+        margin: 15px 0 0;
     }
 }
 
@@ -248,6 +510,53 @@
         margin: 14px 0 0 0px;
     }
 
+
+    .fgh-single .icon {
+        width: 100px;
+        margin: 0 20px 0 0;
+    }
+
+    .ndf-full-image {
+        height: 300px;
+    }
+    .ndf-wrapper {
+        --item: 2;
+    }
+    .ndf-single .texts .b-number {
+        font-size: 45px;
+    }
+
+
+    .rp-l1-nav ul li {
+        margin: 15px 24px 0 0;
+    }
+    .rp-l2-nav ul {
+        --inner-space: 14px;
+        --bt-space: 22px;
+        --item: 2;
+    }
+    .rp-card-box .close-button {
+        margin: -10px -10px 0 0;
+        width: 40px;
+    }
+    .rp-shape1 {
+        width: 190px;
+        right: -58px;
+        bottom: -50px;
+    }
+    .partners-wrapper {
+        --item: 2;
+    }
+    .partner-single .logo-image {
+        height: 70px;
+    }
+
+    #scrollUp {
+        bottom: 15px;
+        right: 15px;
+        width: 28px;
+        height: 28px;
+    }
 }
 
 

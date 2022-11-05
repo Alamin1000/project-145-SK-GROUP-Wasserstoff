@@ -57,23 +57,70 @@
 
 
 
-    // window-animation
-    function winCount(){
-      document.addEventListener('scroll', function(){
-        let ticking = false;
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            const windPos = window.scrollY;
-            const windHeight = window.innerHeight;
-            document.querySelector('body').style.setProperty('--windPos', windPos);
-            ticking = false;
-          });
-          ticking = true;
-        }
-      })
-    }
-    winCount();
+  // window-animation
+  function winCount(){
+    document.addEventListener('scroll', function(){
+      let ticking = false;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const windPos = window.scrollY;
+          const windHeight = window.innerHeight;
+          document.querySelector('body').style.setProperty('--windPos', windPos);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    })
+  }
+  winCount();
      
+
+  // jquery-counter-up
+  $(document).ready(function(){
+    $('.counter').each(function(){
+        var thisis = $(this);
+        var time = 1000;
+        var step = 500;
+        var value = $(this).text();
+        $(this).attr('value',value)
+        var valueF = $(this).attr('value');
+        if($(thisis).length){
+            $(window).scroll(function(){
+              if ( $(thisis).offset().top < ($(window).scrollTop() + $(window).height() - 20) ) {
+                 if (($(thisis).hasClass('counterup-done'))) {
+                 }else{
+                    $(thisis).addClass('counterup');
+                 }
+              }
+              if ($(thisis).hasClass('counterup')) {
+                setTimeout( function(){
+                    $(thisis).removeClass('counterup');
+                    $(thisis).addClass('counterup-done')
+                }  , time );
+              }
+              if ($(thisis).hasClass('counterup')) {
+                if (valueF.indexOf('.') > -1) {
+                    var nbr = valueF;
+                    var afd = (nbr!=Math.floor(nbr))?(nbr.toString()).split('.')[1].length:0;
+                    for (let i = 0; i < ((step - 1) + 1); i++) {
+                        setTimeout( function(){ 
+                            var calv = ((valueF/step) + i*(valueF/step));
+                            $(thisis).text(calv.toFixed(afd));
+                        }  , time/step*i );
+                    }
+                }else{
+                    for (let i = 0; i < ((step - 1) + 1); i++) {
+                        setTimeout( function(){ 
+                            var calv = (Math.floor((valueF/step) + i*(valueF/step)));
+                            $(thisis).text(calv.toString().replace(/\D/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ','));
+                        }  , time/step*i );
+                    }
+                }
+              }
+            }); 
+        };
+    });
+});
 
 })(jQuery);
 

@@ -1,6 +1,6 @@
 /* buttons */
 .default-button {
-    padding: 9px 36px;
+    padding: 8px 35px;
     font-size: 20px;
     letter-spacing: 1.34px;
     font-weight: 700;
@@ -10,12 +10,17 @@
     justify-content: center;
     text-align: center;
     transition: 0.3s;
+    border: 1px solid transparent;
     background: var(--theme__color1);
     color: #fff;
 }
 .default-button:hover {
     background: var(--theme__color2);
     color: #fff;
+}
+
+.default-button.default-button--theme2 {
+    background: var(--theme__color2);
 }
 /* buttons */
 
@@ -53,6 +58,50 @@
 	}
 }
 /* animations-end */
+
+
+/* -checkbox-round- */
+.checkbox-round {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    font-size: 14px;
+    flex-shrink: 0;
+    position: relative;
+}
+.checkbox-round::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border: 1px solid #000;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: inherit;
+}
+.checkbox-round::after {
+    content: '';
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    background: #000;
+    top: 4px;
+    left: 4px;
+    display: block;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.3s;
+}
+.checkbox-round:checked::after {
+    opacity: 1;
+}
 
 
 /* small-tools */
