@@ -1256,7 +1256,7 @@ main {
   font-family: var(--Blender);
   text-transform: uppercase;
 }
-.testimonial-in-r1-slider-side {
+.testimonial-in-r1-image-side {
 	width: 49.2%;
   margin-left: 6%;
 	flex-shrink: 0;
@@ -1265,7 +1265,7 @@ main {
 
 }
 .testimonial-slider .owl-nav {
-	margin: 20px 0 0 -30px;
+	margin: 20px auto 0;
 }
 .testimonial-slide {
 

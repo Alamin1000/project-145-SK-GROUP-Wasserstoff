@@ -56,6 +56,18 @@
   });
 
 
+  $(".rp-card-box .close-button").click(function(){
+    let thisIs = $(this);
+    thisIs.closest('.rp-card-box').addClass('invisible');
+  })
+  $('.rp-l1-nav ul li a').on('shown.bs.tab',function(e){
+    $('.rp-card-box').removeClass('invisible');
+  });
+  $('.rp-l2-nav ul li a').on('shown.bs.tab',function(e){
+    $('.rp-card-box').removeClass('invisible');
+  })
+
+
 
   // window-animation
   function winCount(){
