@@ -91,7 +91,7 @@
   $(document).ready(function(){
     $('.counter').each(function(){
         var thisis = $(this);
-        var time = 1000;
+        var time = 1200;
         var step = 500;
         var value = $(this).text();
         $(this).attr('value',value)
